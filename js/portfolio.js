@@ -85,6 +85,11 @@ function startSound(){
 	soundoffpic.classList.add('show');
 	vid.muted = false;
 }
+replaypic.addEventListener('click', replayVideo);
+function replayVideo(){
+	vid.currentTime=0;
+	vid.play();
+}
 
 
 

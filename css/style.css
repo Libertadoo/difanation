@@ -258,6 +258,7 @@ section p {
 .vidbut {
     width: 22px;
     padding-right: 7px;
+	cursor: pointer;
 }
 
 .video-container {
