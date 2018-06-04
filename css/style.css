@@ -1,0 +1,667 @@
+@font-face {
+    font-family: 'kionaitalic';
+    src: url('kiona-itallic-webfont.woff2') format('woff2'),
+    url('kiona-itallic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'kionaregular';
+    src: url('kiona-regular-webfont.woff2') format('woff2'),
+    url('kiona-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.burgerPic{
+	width:25px;
+	cursor: pointer;
+}
+/****** LOADER *****/
+div#load_screen{
+	background: #000;
+	opacity: 1;
+	position: fixed;
+	z-index: 10;
+	top: 0px;
+	width: 100%;
+	height: 1600px;
+}
+
+div#load_screen > div#loading{
+	color: #FFF;
+	width: 120px;
+	height: 24px;
+	margin: 300px auto;
+}
+.spinner {
+  margin: 100px auto;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.spinner > div {
+  background-color: #333;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+
+
+
+
+
+
+
+/* mobiles first*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/******** HAMBURGER MENU********/
+
+#menu-dropdown {
+    position: fixed;
+    width: 100%;
+    max-width: 100%;
+    height: 435px;
+    top: -435px;
+    background: #151719;
+    transition: all 700ms ease-out;
+    z-index: 300;
+}
+
+#menu-dropdown.active {
+    top: 0px;
+}
+.closeItPls{
+	visibility: hidden;
+}
+
+#menu-dropdown ul {
+    margin-top: 110px;
+}
+
+#menu-dropdown ul li {
+    text-align: center;
+    margin: 40px 28%;
+    padding-bottom: 3px;
+    border-bottom: 1px solid rgba(100, 100, 100, 0.5);
+    list-style: none;
+}
+
+#menu-dropdown ul li a {
+    color: rgba(230, 230, 230, 0.9);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-family: kionaregular, work sans, Ariel, sans, sans-serif;
+    font-weight: 700;
+}
+
+.topnav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    background: #151719;
+    z-index: 0;
+}
+
+#logo {
+    position: fixed;
+    top: 0;
+    width: 500px;
+    max-width: 230px;
+    left: 5%;
+}
+
+
+.toggle-btn {
+    position: fixed;
+    right: 35px;
+    top: 25px;
+    z-index: 3;
+}
+
+.toggle-btn span {
+    display: block;
+    width: 33px;
+    height: 3px;
+    background: rgba(230, 230, 230, 0.9);
+    margin: 7px 0px;
+    z-index: 100;
+}
+
+
+/* Styling mobile version */
+
+section {
+    max-width: 100%;
+}
+
+section h1,
+h2,
+h3 {
+    font-family: kionaregular, work sans, Ariel, sans, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+section h1 {
+    margin: 80px 0 50px 0;
+}
+
+section h3 {
+    margin: 20px 0;
+}
+
+section img {
+    width: 600px;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+section p {
+    display: block;
+    margin: auto;
+    max-width: 85%;
+    font-family: Work sans, Ariel, sans-serif;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+#servicelist > article:nth-child(3) > div > div > p{
+	text-align: center;
+}
+#servicelist > article:nth-child(2) > div > div > p{
+	text-align: center;
+}
+#servicelist > article:nth-child(4) > div > div > p{
+	text-align: center;
+}
+
+/**** VIDEO   *****/
+
+#allTheWayUp {
+    margin-top: 90px;
+}
+
+#allTheWayUp video {
+    max-width: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: inline;
+}
+
+.vidbut {
+    width: 22px;
+    padding-right: 7px;
+}
+
+.video-container {
+    position: relative;
+}
+
+.video-container video {
+    position: relative;
+}
+
+
+.video-buttons {
+    position: absolute;
+    bottom: 3%;
+    left: 2%;
+}
+
+/******* WELCOME TEXT *******/
+
+#allTheWayUp p {
+    margin: 10%;
+    text-align: justify;
+}
+
+#allTheWayUp p span {
+    font-weight: 900;
+    font-size: 1.1em;
+    font-family: kionaregular;
+}
+
+/***** about daniel*************/
+
+.about-text {
+    margin: 0 0 0 5%;
+    padding: 0;
+}
+
+.about-text p {
+    margin: 1em;
+    text-align: justify;
+}
+
+@media only screen and (min-width: 750px) {
+    .daniel-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+}
+
+/* PORTFOLIO */
+
+.gallery {
+    max-width: 90%;
+    margin-left: 7%;
+}
+
+.gallery img {
+    padding: 0;
+    transition: 1s;
+    width: 400px;
+
+}
+
+.gallery .wider {
+    width: 460px;
+    max-width: 32%;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+.hide {
+    display: none;
+}
+
+.arrow-portfolio {
+    max-width: 5%;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.seeMore h3 {
+    margin: 0;
+}
+
+@media only screen and (max-width: 770px) {
+    .gallery img {
+        width: 90%;
+    }
+
+    .daniel-container img {
+        display: block;
+        max-width: 90%;
+        margin: auto;
+    }
+
+
+}
+
+/******  SERVICE SECTION MEDIA QUERIES  ********/
+
+#servicelist {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+}
+
+.service {
+    position: relative;
+}
+
+
+.text-box {
+    position: absolute;
+    z-index: 2;
+    bottom: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: rgba(230, 230, 230, 1);
+    max-width: 90%;
+    margin: 0 5%;
+    padding: 5%;
+}
+
+.text-box h1 {
+    margin: 0;
+    padding-bottom: 2%;
+}
+
+@media only screen and (min-width: 512px) {
+
+    #servicelist {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+    }
+
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+    #servicelist {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+    }
+}
+
+/**** PORTFOLIO   *****/
+
+/**** REVIEWS   *****/
+
+.quotation {
+    display: block;
+    max-width: 5em;
+    margin: auto;
+}
+
+.slide p {
+    margin: 3em 3em;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.slider {
+    overflow: hidden;
+}
+
+.slider .yet-another-container div {
+    width: 33%;
+    float: left;
+}
+
+.slider .yet-another-container {
+    position: relative;
+    width: 300%;
+    margin: 0;
+    left: 0;
+    animation: slideMe 30s steps(3) infinite;
+}
+
+@keyframes slideMe {
+    to {
+        left: -297%;
+    }
+}
+
+@media only screen and (min-width: 760px){
+    #reviews p {
+    max-width: 50%;
+    display: block;
+    margin-left: 25%;
+    font-size: 1.12em;
+}
+}
+
+
+
+/**** CONTACTS   *****/
+
+#contacts h1 {
+    margin-bottom: 0;
+}
+
+#container-contacts {
+    display: inherit;
+    position: relative;
+
+}
+
+#contact-box {
+    position: absolute;
+    top: 20px;
+    width: 35%;
+    left: 3%;
+}
+
+
+
+#contact-box p {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 3px;
+    padding: 2%;
+    padding-left: 5%;
+    color: rgba(230, 230, 230, 0.95);
+    width: 100%;
+    font-size: 1.8em;
+}
+
+#container-contacts img {
+    margin-bottom: 0;
+    display: block;
+}
+
+a {
+    text-decoration: underline rgba(230, 230, 230, 0.95);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 770px) {
+    #contact-box {
+    width: 55%;
+}
+
+    #contact-box p {
+        font-size: 1em;
+    }
+}
+
+/***** footer *******/
+
+footer {
+    background: #151719;
+    color: rgba(230, 230, 230, 0.8);
+    padding: 20px;
+}
+
+footer p {
+    text-align: center;
+}
+
+
+
+
+
+
+@media only screen and (min-width: 1230px) {
+
+    /**** NAV   *****/
+    #menu-dropdown {
+        position: fixed;
+        width: 100%;
+        max-width: 100%;
+        height: 53px;
+        background: #151719;
+        top: 0;
+        z-index: 200;
+        transition: none;
+    }
+
+    .nav-links {
+        max-width: 70%;
+        width: 2000px;
+        position: fixed;
+        right: 0;
+    }
+
+    #menu-dropdown.active {
+        top: 0px;
+    }
+
+    #menu-dropdown ul {
+        margin-top: 0;
+        position: fixed;
+    }
+
+    #menu-dropdown ul li {
+        max-width: 20%;
+        margin: 1.9% 5%;
+        padding-bottom: 0;
+        border-bottom: 0;
+        display: inline;
+        float: left;
+        z-index: 20;
+
+    }
+
+    #menu-dropdown ul li a {
+        font-size: 1.1em;
+        font-weight: 100;
+    }
+
+    .topnav {
+        position: fixed;
+        top: 0;
+        width: 0;
+
+        height: 90px;
+        background: #151719;
+        z-index: 0;
+    }
+
+    #logo {
+        position: fixed;
+        top: -3px;
+        left: 5%;
+        max-width: 150px;
+        z-index: 50;
+    }
+
+
+    .toggle-btn {
+        display: none;
+        position: fixed;
+        right: 35px;
+        top: 25px;
+        z-index: 3;
+    }
+
+    .toggle-btn span {
+        display: block;
+        width: 33px;
+        height: 3px;
+        background: rgba(230, 230, 230, 0.9);
+        margin: 7px 0px;
+        z-index: 100;
+    }
+
+    /**** VIDEO   *****/
+    #allTheWayUp {
+        margin-top: 53px;
+    }
+
+    #allTheWayUp.video {
+        max-width: 100%;
+        background-color: black;
+        z-index: 0;
+    }
+
+    #allTheWayUp p {
+        margin: 5% 30%;
+        font-weight: 500;
+        font-size: 1.13em;
+        text-align: justify;
+    }
+
+    /**** about me   *****/
+    .about-text {
+        max-height: 54%;
+        margin-top: 20%;
+    }
+
+    .about-text p {
+        text-align: justify;
+    }
+
+    /**** portfolio   *****/
+    .gallery img {
+        max-width: 24%;
+    }
+
+
+
+   /**** SERVICE   *****/
+
+    .text-box {
+        height: 500px;
+        max-height: 20%;
+    }
+
+    /**** CONTACTS   *****/
+    #contact-box {
+        max-width: 40%;
+        top: 60px;
+    }
+
+    #contact-box p {
+        padding: 0.5em;
+        font-size: 1.1em;
+    }
+
+}
